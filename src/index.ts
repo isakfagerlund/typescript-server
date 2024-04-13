@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
-import { mySchemaUsers } from './db/schema';
+import { NewBudget, budgets } from './db/schema';
 import bodyParser from 'body-parser';
 
 dotenv.config();
@@ -19,16 +19,16 @@ app.get('/', async (req, res) => {
   res.send('Welcome to TS Express Node');
 });
 
-app.get('/users', async (req, res) => {
-  const users = await db.select().from(mySchemaUsers);
-  res.json(users);
+app.get('/budgets', async (req, res) => {
+  const allBudgets = await db.select().from(budgets);
+  res.json(allBudgets);
 });
 
-app.post('/user', async (req, res) => {
-  const newUser: { name: string } = req.body;
+app.post('/budget', async (req, res) => {
+  const newBudget: NewBudget = req.body;
 
-  const createdUser = await db.insert(mySchemaUsers).values(newUser);
-  res.json(createdUser);
+  const createdBudget = await db.insert(budgets).values(newBudget);
+  res.json(createdBudget);
 });
 
 app.listen(port, () => {

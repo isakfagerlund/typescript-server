@@ -10,5 +10,5 @@ export default {
   dbCredentials: {
     connectionString: process.env.DRIZZLE_DATABASE_URL as string,
   },
-  schemaFilter: ['my_schema'],
+  schemaFilter: ['budget_schema'],
 } satisfies Config;
