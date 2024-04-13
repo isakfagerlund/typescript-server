@@ -2,8 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
-import { NewBudget, budgets } from './db/schema';
 import bodyParser from 'body-parser';
+import { NewBudget, budgets } from '../src/db/schema';
 
 dotenv.config();
 
@@ -34,3 +34,5 @@ app.post('/budget', async (req, res) => {
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+module.exports = app;
