@@ -1,0 +1,1 @@
+ALTER TABLE "budget_schema"."budgets" ALTER COLUMN "tax_percentage" SET NOT NULL;

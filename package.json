@@ -4,6 +4,8 @@
   "description": "Test",
   "type": "module",
   "scripts": {
+    "db:migrate": "tsx ./src/db/migrate.ts",
+    "db:generate": "drizzle-kit generate:pg --schema src/db/schema.ts --out ./drizzle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,7 +16,8 @@
     "@vercel/edge": "^1.1.1",
     "@vercel/node": "^3.0.26",
     "drizzle-orm": "^0.30.8",
-    "pg": "^8.11.5"
+    "pg": "^8.11.5",
+    "tsx": "^4.7.2"
   },
   "devDependencies": {
     "drizzle-kit": "^0.20.14",

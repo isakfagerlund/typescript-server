@@ -11,7 +11,7 @@ const db = drizzle(sql);
 
 export async function POST(request: Request) {
   const newBudget: NewBudget = await request.json();
-  const createdBudget = await db.insert(budgets).values(newBudget);
+  await db.insert(budgets).values(newBudget);
 
   return new Response(JSON.stringify(newBudget), {
     status: 201,

@@ -1,0 +1,48 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1713034396438,
+      "tag": "0000_neat_alice",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1713034580711,
+      "tag": "0001_great_makkari",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1713034742988,
+      "tag": "0002_aberrant_fantastic_four",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1713034891439,
+      "tag": "0003_familiar_natasha_romanoff",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1713034942867,
+      "tag": "0004_low_captain_midlands",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1713034991690,
+      "tag": "0005_swift_jack_power",
+      "breakpoints": true
+    }
+  ]
+}

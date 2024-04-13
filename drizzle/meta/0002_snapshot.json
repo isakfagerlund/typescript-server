@@ -1,0 +1,69 @@
+{
+  "id": "c99248ef-0fae-4f3b-a310-44561e5fa4f2",
+  "prevId": "a80f331a-87fc-44ce-b599-5ec93a1c85ca",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "budgets": {
+      "name": "budgets",
+      "schema": "budget_schema",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "budget_user": {
+          "name": "budget_user",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "monthly_brutto": {
+          "name": "monthly_brutto",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tax_percentage": {
+          "name": "tax_percentage",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "investment_percentage": {
+          "name": "investment_percentage",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "costs": {
+          "name": "costs",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {
+    "budget_schema": "budget_schema"
+  },
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

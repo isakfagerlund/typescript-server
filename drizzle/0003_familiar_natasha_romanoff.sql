@@ -1,0 +1,1 @@
+ALTER TABLE "budget_schema"."budgets" ADD COLUMN "is_active" boolean DEFAULT true;

@@ -1,4 +1,11 @@
-import { serial, text, pgSchema, integer, jsonb } from 'drizzle-orm/pg-core';
+import {
+  serial,
+  text,
+  pgSchema,
+  integer,
+  jsonb,
+  boolean,
+} from 'drizzle-orm/pg-core';
 
 type CostsObject = {
   [key: string]: string;
@@ -11,9 +18,11 @@ export const budgetSchema = pgSchema('budget_schema');
 
 export const budgets = budgetSchema.table('budgets', {
   id: serial('id').primaryKey(),
-  budgetUser: text('name'),
+  budgetUser: text('budget_user'),
   monthlyBrutto: integer('monthly_brutto'),
-  taxPercentage: integer('tax_percentage'),
+  taxPercentage: integer('tax_percentage').default(45).notNull(),
   investmentPercentage: integer('investment_percentage'),
   costs: jsonb('costs').$type<CostsObject[]>(),
+  email: text('email'),
+  isActive: boolean('is_active').default(true),
 });
